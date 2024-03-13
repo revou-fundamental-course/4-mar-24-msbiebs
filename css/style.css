@@ -1,1 +1,414 @@
-/*  */
+/* Import Google Font - Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    }
+    
+    body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgba(154, 181, 253, 0.9);
+    }
+/* 
+  .container {
+    min-width: 250px;
+  } */
+
+  .box {
+    width: 500px;
+    background: #d8d6d6;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.76);
+
+  }
+
+
+
+
+  h1 {
+    color: rgba(214, 71, 71, 0.7);
+    font-weight: bold;
+    font-size: 36px;
+    padding: 30px 0;
+    transition: all 0.5s;
+  }
+
+h2 {
+  color: rgba(109, 71, 214, 0.7);
+  font-weight: bold;
+  font-size: 36px;
+  padding: 10px 30px;
+  transition: all 0.5s;
+}
+
+h3 {
+  color: rgba(53, 53, 53, 0.7);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 30px;
+  transition: all 0.5s;
+}
+    
+h4 {
+  color: rgba(53, 53, 53, 0.7);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 30px;
+  transition: all 0.5s;
+}
+    .content {
+        padding: 0 30px;
+        
+    }
+    
+    .input {
+        background: #99ade4;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    
+    .input label {
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+        color: #000;
+        margin-bottom: 5px;
+    }
+    .input input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #4f7df9;
+        width: 50%;
+        text-align: center;
+        font-size: 28px;
+        font-family: "Nunito", sans-serif;
+    }
+
+
+    
+    .inputW {
+        background: #99ade4;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    .inputW label {
+      display: block;
+      font-size: 20px;
+      font-weight: 500;
+      color: #000;
+      margin-bottom: 10px;
+  }
+
+   .inputW input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #4f7df9;
+        width: 50%;
+        text-align: center;
+        font-size: 20px;
+        font-family: "Nunito", sans-serif;
+    }
+
+    .inputH {
+        background: #99ade4;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+
+    .inputH label {
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+        color: #000;
+        margin-bottom: 10px;
+    }
+   .inputH input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #4f7df9;
+        width: 50%;
+        text-align: center;
+        font-size: 20px;
+        font-family: "Nunito", sans-serif;
+    }
+
+  
+button.calculate {
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+    background: rgb(255, 144, 237);
+    font-size: 18px;
+    border-radius: 7px;
+    padding: 12px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: all 0.7s;
+  }
+  button.calculate:hover {
+    background: #f85b97f6;
+  }
+
+  
+  
+.result {
+    padding: 10px 20px;
+  }
+  .result p {
+    font-weight: 600;
+    font-size: 20px;
+    color: #3f69dd;
+    margin-bottom: 10px;
+  }
+  .result #result {
+    font-size: 36px;
+    font-weight: 500;
+    color: #3f69dd;
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 55px;
+    margin-bottom: 25px;
+  }
+  #comment {
+    color: #f03e73;
+    font-weight: 800;
+  }
+
+.comment {
+    display: none;
+    border: dashed 1px;
+    border-radius: 70px;
+    padding: 5px;
+}
+
+
+
+
+
+
+.gender {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background: #fff;
+    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+  /* Style for Radio */
+.gender .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    /* margin-bottom: 12px; */
+    margin-top: 7px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
+
+  
+  /* Hide the browser's default radio button */
+  .gender .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .gender .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .gender .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .gender .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .gender .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+  /* END Style for Radio */
+
+.containerHW {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  padding-top: 300px;
+  
+
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin-top: 200px;
+  margin-left: 500px;
+  padding: 20px;
+  border: 1px solid #d4d0d0;
+  width: 900px;
+  border-radius: 10px;
+
+}
+
+#modalText {
+  padding-top: 5px;
+  padding-right: 5px;
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  color: rgb(24, 23, 23);
+}
+
+.modal-wrong {
+border: 2px solid red;
+}
+
+.modal-correct {
+  border: 2px solid green;
+  }
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.close:hover {
+  color: #d41111; 
+}
+
+
+
+.footer {
+
+  font-size: 20px;
+  color: #ccc;
+  font-family: "Nunito", sans-serif;
+}
+
+.linkDownload {
+
+    position: fixed;
+    background-color: #2282d1;
+    margin: 20px;
+    padding: 10px 10px;
+    left: -0px;
+    border-radius: 5px;
+    bottom: -0px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 1s;
+  }
+
+.linkDownload i {
+    padding-left: 7px;
+  }
+  
+  .linkDownload:hover {
+    text-decoration: none;
+    background-color: rgb(129, 129, 129);
+  }
+  
+
+
+    .box {
+        width: 500px;
+    }
+
+
+
+    
+    .input label {
+
+        font-size: 18px;
+    }
+
+    .inputH label, .inputW label {
+        font-size: 14px;
+    }
+
+
+    .input input, .inputH input, .inputW input{
+        font-size: 24px;
+    }
+
+
+    .modal-content {
+
+      width: 500px;
+    }
+
+
+
