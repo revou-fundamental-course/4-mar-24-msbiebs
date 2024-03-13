@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-   
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +26,8 @@
           <h1>Kalculator BMI</h1>
           <div class="content">
           
+            <form id ="myForm">
+
             <div class="gender">
 
 
@@ -59,21 +61,28 @@
               <input type="number" id="weight" required>
             </div>
           </div>
+          <div>
+          </form>
 
             <button class="calculate" id="submit" onclick="calculate();">Hitung BMI</button>
-          </div>
+            </div>
           <div class="result">
             <p>Hasil</p>
             <div id="result">00.00</div>
             <p class="comment"></p>
+        </div>
+            <button class="reset" id="Reset" onclick="fun()">Reset</button>
           </div>
-
+        </form>
           <div class="linkDownload"><a class="footer" target="_blank" href="https://www.halodoc.com/tanya-dokter?af_xp=custom&source_caller=ui&pid=Web&af_click_lookback=7d&shortlink=jjm07ihq&af_adset=diet&af_ad=text_login&af_channel=Organic&c=Web_diet_text_login">Konsultasi Dokter</a></div>
            
-
         </div>
       </div>
-
+<script>
+  function fun(){
+    document.getElementById("myForm").reset();
+  }
+</script>
 
 
 

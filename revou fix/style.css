@@ -153,7 +153,7 @@ button.calculate {
     cursor: pointer;
     font-family: "Nunito", sans-serif;
     color: #fff;
-    background: rgb(255, 144, 237);
+    background: rgb(253, 67, 222);
     font-size: 18px;
     border-radius: 7px;
     padding: 12px 0;
@@ -166,7 +166,24 @@ button.calculate {
     background: #f85b97f6;
   }
 
-  
+  .reset {
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+    background: rgb(252, 50, 60);
+    font-size: 18px;
+    border-radius: 7px;
+    padding: 12px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: all 0.7s;
+    margin-bottom: 30px;
+  }
+  .reset:hover {
+    background-color: #d67777;
+  }
+
   
 .result {
     padding: 10px 20px;
@@ -385,6 +402,8 @@ border: 2px solid red;
 
     .box {
         width: 500px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
 
